@@ -4,16 +4,36 @@ public class Class1
 {
     public void croc()
     {
-        Random kake = new Random();
-        int randomNumber = kake.Next(1, 12);
-        Console.WriteLine(randomNumber);
-        //bool numberIsSmaller = 3 < 5;
-        
-       //string input = Console.ReadLine();
-        if ( 3 < 5)
+        int points = 0;
+        while (true)
         {
-            Console.WriteLine();
+            Console.Clear();
+            Random kake = new Random();
+            int randomNumber = kake.Next(1, 12);
+            int randomNumber2 = kake.Next(1, 12);
+            Console.WriteLine($"Points: {points}");
+            Console.WriteLine($"{randomNumber} _ {randomNumber2}");
+            string guess = Console.ReadLine();
+            
+            if (randomNumber == randomNumber2 && guess == "=")
+            {
+                points++;
+            }
+            else if (randomNumber > randomNumber2 && guess == ">")
+            {
+               points++; 
+            }
+            else if (randomNumber < randomNumber2 && guess == "<")
+            {
+                points++;
+            }
+            else
+            {
+                points--;
+            }
         }
+        
+       
     
     }
 }
