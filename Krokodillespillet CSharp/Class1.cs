@@ -5,13 +5,12 @@ public class Class1
     public void croc()
     {
         Random kake = new Random();
-        int randomNumber = kake.Next(1, 11);
-        string space = kake.Next().ToString();
-        int anotherNumber = kake.Next(3_5);
-        
+        int randomNumber = kake.Next(1, 12);
         Console.WriteLine(randomNumber);
-       string input = Console.ReadLine();
-        //if (randomNumber > input)
+        //bool numberIsSmaller = 3 < 5;
+        
+       //string input = Console.ReadLine();
+        if ( 3 < 5)
         {
             Console.WriteLine();
         }
